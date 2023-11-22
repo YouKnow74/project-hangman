@@ -8,3 +8,17 @@
 * the user should be able to see progress
 * the user should be penlaized for incorrect inputs
 * 
+
+Game description
+
+User stories
+
+screen shots
+
+rules
+
+technoliges used
+
+future features to be added
+
+Rules to be added / Css to be modifed
