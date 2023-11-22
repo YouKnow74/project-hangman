@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Project</title>
+</head>
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/style.css">
+<body>
+<div class="sideBar">
+    <div class="ngctrl">
+        <a href="#" class="ngBtn" id="NewGame">New Game</a>
+    </div>
+    <!-- <div>
+        <label>Difficulity</label>
+        <select id="difficulity">
+            <option value="easy" selected>Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+    </div> -->
+    <div class="leaderboardDiv">
+        <a href="#" class="leaderboard">Leaderboard</a>
+        <div class="playersAndScore">
+
+        </div>
+    </div>
+    
+        
+</div>
+<div class="game-container">
+
+    <div class="header-container">
+        <h1 class="header-container-h1">
+            Hangman
+        </h1>
+        <h4 id="timer">00</h4>
+    </div>
+
+    <div class="img-change">
+        <div class="header-timer">
+            
+        </div>
+        <div class="image">
+
+        </div>
+        <div class="message">
+
+        </div>
+        <div class="lettersOfWord">
+            <!-- <a>text</a> -->
+        </div>
+    </div>
+
+    <div class="letters-available">
+        <div>
+        <h3>Letters</h3>
+    </div>
+    <div class="all-letters">
+        <a href="#" class="letters" id="a">a</a>
+        <a href="#" class="letters" id="b">b</a>
+        <a href="#" class="letters" id="c">c</a>
+        <a href="#" class="letters" id="d">d</a>
+        <a href="#" class="letters" id="e">e</a>
+        <a href="#" class="letters" id="f">f</a>
+        <a href="#" class="letters" id="g">g</a>
+        <a href="#" class="letters" id="h">h</a>
+        <a href="#" class="letters" id="i">i</a>
+        <a href="#" class="letters" id="j">j</a>
+        <a href="#" class="letters" id="k">k</a>
+        <a href="#" class="letters" id="l">l</a>
+        <a href="#" class="letters" id="m">m</a>
+        <a href="#" class="letters" id="n">n</a>
+        <a href="#" class="letters" id="o">o</a>
+        <a href="#" class="letters" id="p">p</a>
+        <a href="#" class="letters" id="q">q</a>
+        <a href="#" class="letters" id="r">r</a>
+        <a href="#" class="letters" id="s">s</a>
+        <a href="#" class="letters" id="t">t</a>
+        <a href="#" class="letters" id="u">u</a>
+        <a href="#" class="letters" id="v">v</a>
+        <a href="#" class="letters" id="w">w</a>        
+        <a href="#" class="letters" id="x">x</a>
+        <a href="#" class="letters" id="y">y</a>
+        <a href="#" class="letters" id="z">z</a>
+        </div>
+    </div>
+   
+</div>
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2></h2>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the Modal Body</p>
+        <p>Some other text...</p>
+      </div>
+      <!-- <div class="modal-footer">
+        <h3>Modal Footer</h3>
+      </div> -->
+    </div>
+  
+  </div>
+
+  <div id="modalName" class="modal1">
+
+    <!-- Modal content -->
+    <div class="modal1-content">
+      <div class="modal1-header">
+        <h2>Welcome to our Hangman Game</h2>
+      </div>
+      <div class="modal1-body">
+        <div>
+       <h3>Enter your name to play</h3>
+       <input type="text" id="playerName"/>
+       <p class="par">Name cannot be empty</p>
+    </div>
+       <div>
+        <h3>Difficulity</h3>
+        <select id="difficulity">
+            <option value="easy" selected>Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+    </div>
+    <div class="modal1-body rules">
+        <h4>Rules</h4>
+        <h6>Easy:<br />
+        -You have 12 mistakes and then you <b>lose</b>.<br />
+        -You have 60 Seconds to guess the word or you <b>lose</b>.<br /> <br />
+        Medium:<br />
+        -You have 6 mistakes and then you <b>lose</b>.<br />
+        -You have 45 Seconds to guess the word or you <b>lose</b>.<br /><br />
+        Hard:<br />
+        -You have 3 mistakes and then you <b>lose</b>.<br />
+        -You have 30 Seconds to guess the word or you <b>lose</b>.
+        </h6>
+    </div>
+      </div>
+      
+      <div class="modal1-footer">
+        <a href="#" id="submit">Play</a>
+      </div> 
+    </div>
+  
+  </div>
+
+<script src="js/exercise.js"></script>
+    
+</body>
+</html>
