@@ -1,5 +1,6 @@
 //setup global variables
 
+//global array
 let arrList = [
     "Apple", "Banana", "Orange", "Grape", "Strawberry", "Melon", "Kiwi", "Pineapple", "Blueberry", "Raspberry",
     "Cat", "Dog", "Elephant", "Lion", "Tiger", "Giraffe", "Zebra", "Monkey", "Kangaroo", "Penguin",
@@ -26,6 +27,7 @@ let arrList = [
     "Holiday", "Beach", "Forest", "Camping", "Hiking", "Cooking", "Recipe", "Restaurant", "Food", "Drink"
   ];
 
+// Default score
 let score=1;
 
 //let arr=["one","two","three","four","helloworld"];
@@ -57,26 +59,38 @@ let arr = [
 
 //let defArr=["one","two","three","four","helloworld"];
 
-let randInt,selector;
-let code=[];
-let imageCounter=0;
-let diff ="easy";
+// random number to be taken from the array
+let randInt;
 
+// the word to be selected
+let selector;
+// an array for anchors
+let code=[];
+//image changer as images stages names are numbers
+let imageCounter=0;
+//default diffucility 
+let diff ="easy";
+//default player name
 let playerName="Unknown";
+// default player key for local storage
 let playerno=localStorage.length;
+//global variable to stop the timer
 let timegoing;
 
 // create a new game 
 function newGame(){
-   // console.log(localStorage.clear());
+   //console.log(localStorage.clear());
     //console.log(localStorage.getItem("test2"));
+
     //reset global variables
+    //set a new timer for new game until the user starts to play
     seconds=240;  
 
 
-            // setting timer based on diffuculity
-    
+            
+    // remove the "name cannot be empty" if the user tried to start a game without entering his name
     document.querySelector(".par").style.display="none";
+    //rebring the array
     arr=[
         "Apple", "Banana", "Orange", "Grape", "Strawberry", "Melon", "Kiwi", "Pineapple", "Blueberry", "Raspberry",
         "Cat", "Dog", "Elephant", "Lion", "Tiger", "Giraffe", "Zebra", "Monkey", "Kangaroo", "Penguin",
@@ -102,19 +116,23 @@ function newGame(){
         "Photograph", "Camera", "Travel", "Adventure", "Explore", "Map", "Compass", "Backpack", "Passport", "Vacation",
         "Holiday", "Beach", "Forest", "Camping", "Hiking", "Cooking", "Recipe", "Restaurant", "Food", "Drink"
       ];
+      //redfine variables
     randInt,selector;
     code=[];
     imageCounter=0;
     score=10;
     playerno=localStorage.length;
+
+    //remove the image 
     
     document.querySelector(".image").innerHTML = "";
     //reset innerhtml
     document.querySelector(".lettersOfWord").innerHTML="";
-    //select a word from array/dataset
+    //select a word from array/dataset randomly
     randInt = Math.floor(Math.random()*226)+1;
     selector=arr[randInt].toLowerCase();
     
+    // put the number of letter as an empty place
     for(let i=0;i<selector.length;i++){
         
         let ele = document.createElement('a');
@@ -127,12 +145,13 @@ function newGame(){
     document.querySelector(".message").innerHTML= "";
     document.querySelector(".modal-header").classList.remove("modal-header-lost");
 
-    //unselect each letter
+    //unselect each letter and put the click event again
     document.querySelectorAll('.all-letters a').forEach(function(square){
         square.classList.remove("incorrect");
         square.classList.remove("correct");
         square.classList.remove("nomoreClicks");
     });
+    //pop up the start game modal
     document.querySelector(".modal1").style.display ="block";
 
     //closing the first modal after the user input name
@@ -148,7 +167,7 @@ function newGame(){
         else{
         console.log(playerName);
         document.querySelector(".modal1").style.display ="none";
-        //adjust the timer based on diffiucility
+        //clear the previous timer and adjust the timer based on diffiucility
         if(document.querySelector("#difficulity").value == "easy"){
             seconds= 60;
             clearInterval(timegoing);
@@ -161,6 +180,7 @@ function newGame(){
             seconds=30;
             clearInterval(timegoing);
         }
+        //start timer
         timegoing = setInterval(Timer,1000);
     }
 
@@ -182,7 +202,12 @@ function selectLetter(e){
     //    document.querySelectorAll(".l_"+anchorId+"").innerText =anchorId;
    // let indexes=[];
 
-   //difficulties setting and incorrect images and scoring
+
+   /*
+    -change the image based on difficulity if the letter incorrect.
+    -calculate score.
+    -disable the selected letter.
+   */ 
 
    if(selector.indexOf(this.id)==-1 && imageCounter < 12 && diff=="easy"){
     document.getElementById(this.id).classList.add("incorrect");
@@ -210,7 +235,11 @@ function selectLetter(e){
 
 
     // }
-    //put the letter/letters in correct position
+    /*
+    -put the letter/letters in correct position.
+    -calculate score.
+    -disable the selected letter
+    */
 
     if(selector.indexOf(this.id)!=-1){
         document.getElementById(this.id).classList.add("correct");
@@ -224,6 +253,7 @@ function selectLetter(e){
       }
     }}
 
+    //check if the user won or lost after each letter selected
     const result =checkWinOrLose();
 
     //win case
@@ -234,8 +264,8 @@ function selectLetter(e){
         document.querySelectorAll(".all-letters a").forEach(function(e){
             e.classList.add("nomoreClicks")
             });
-         score *=1.5;
-        //adjust and display modal
+         score *=2;
+        //adjust and display modal of winner
         document.querySelector(".modal-header").innerHTML ="<span class='close'>&times;</span> <h2>Congratulations!</h2>";
         document.querySelector(".modal-body").innerHTML = "<h1 class='won'>You Won The Game!</h1>";
         document.querySelector("#myModal").style.display="block";
@@ -244,7 +274,7 @@ function selectLetter(e){
         });
         //save player into leaderboard
         savePlayer(JSON.stringify(playerno),playerName,parseInt(score));
-        // stop the timer if lost
+        // stop the timer if won
         seconds=-1;
         //clearInterval(timegoing);
 
@@ -261,7 +291,7 @@ function selectLetter(e){
         document.querySelectorAll(".all-letters a").forEach(function(e){
             e.classList.add("nomoreClicks")
             });
-        // modal present
+        // modal present for lost and display the correct answer
          document.querySelector(".modal-header").innerHTML ="<span class='close'>&times;</span> <h2>Oops! You did not get the word</h2>";
          document.querySelector(".modal-body").innerHTML = "<h1 class='lost'>You Lost</h1><br /> <h2 class='textLost'>The correct word was ("+selector+")</h2>";
          document.querySelector(".modal-header").classList.add("modal-header-lost");
@@ -272,7 +302,7 @@ function selectLetter(e){
         });
         //save player into leaderboard
         savePlayer(JSON.stringify(playerno),playerName,parseInt(score));
-        // stop the timer if won
+        // stop the timer if lost
         seconds=-1;
         //clearInterval(timegoing);
         //leader();
@@ -284,9 +314,10 @@ function selectLetter(e){
 
     //still playing case
 }
-//check win or lose
+//check win or lose or timer finished 
 function checkWinOrLose(){
     console.log(code);
+    //timer finished
     if(seconds<=0){
         // remove all clicks from all anchors
         document.querySelectorAll(".all-letters a").forEach(function(e){
@@ -309,7 +340,7 @@ function checkWinOrLose(){
         }
         else{
         for(let i=0;i<code.length;i++){
-
+        //check for hangman status
         if(imageCounter == 12){
             return "lost";
         }
@@ -324,7 +355,7 @@ function checkWinOrLose(){
 }
     //check for all letters are set
 
-    //check for hangman status
+   
 }
 
 // function modalctrl(){
@@ -381,6 +412,8 @@ function leader(){
     // let tempP = data.player;
     // let tempC = data.score;
 //}
+
+//show the leaderboard
 for(let i=localStorage.length;i>0;i--){
     // get the data from last player to first
     console.log(localStorage.key[JSON.stringify(i)]); 
@@ -430,6 +463,7 @@ document.getElementById("NewGame").addEventListener('click',newGame);
 // leaderboard click event
 document.querySelector(".leaderboard").addEventListener('click',leader);
 
+//start the new game 
 newGame();
 
 

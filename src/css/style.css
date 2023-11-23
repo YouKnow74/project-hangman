@@ -1,3 +1,10 @@
+body{
+    background-color: beige;
+    
+}
+
+
+
 .all-letters{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -9,6 +16,10 @@
     border: 1px solid red;
     text-decoration: none;
     color: black;
+}
+
+.header-container,.img-change{
+    cursor: url("../img/hanger.png") , auto;
 }
 
 .letters-available{
