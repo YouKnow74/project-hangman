@@ -17,7 +17,7 @@
 ![screenshot2P1](https://github.com/YouKnow74/project-hangman/assets/79399404/f4cc8214-6cd3-4299-8ed1-2b6cf56924c3)
 ![screenshot3P1](https://github.com/YouKnow74/project-hangman/assets/79399404/6b486c60-4065-4f3a-9d08-8f3fa1cb1263)
 
-#### Rules
+# Rules
 + Guess the word before the time finishes or before the gallows reach the maximum limit of mistakes.
   
 1. Easy:
