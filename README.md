@@ -1,7 +1,7 @@
 # Game Description
 - Hangman is a classic game of guessing the word designed to challenge the player for their knowledge and vocabulary skills. The player attempts to guess the random word by selecting the letters with a limited amount of incorrect guesses allowed and a limited amount of time before the gallow is complete or the timer runs out.
 
-# User stories
+# User Stories
 - As a player, I should be able to start a new game and receive a random word to guess.
 - As a player, I should be able to select a difficulty to challenge me in the game.
 - As a player, I should be able to see the time remaining.
