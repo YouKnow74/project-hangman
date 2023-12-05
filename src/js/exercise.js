@@ -1,37 +1,43 @@
 //setup global variables
 
 //global array
-let arrList = [
-    "Apple", "Banana", "Orange", "Grape", "Strawberry", "Melon", "Kiwi", "Pineapple", "Blueberry", "Raspberry",
-    "Cat", "Dog", "Elephant", "Lion", "Tiger", "Giraffe", "Zebra", "Monkey", "Kangaroo", "Penguin",
-    "Computer", "Keyboard", "Mouse", "Monitor", "Laptop", "Tablet", "Smartphone", "Printer", "Router", "Server",
-    "Mountain", "Ocean", "River", "Forest", "Desert", "Canyon", "Valley", "Island", "Lake", "Waterfall",
-    "Sun", "Moon", "Star", "Planet", "Galaxy", "Universe", "Earth", "Mars", "Jupiter", "Saturn",
-    "Chair", "Table", "Sofa", "Bed", "Lamp", "Clock", "Book", "Pen", "Pencil", "Paper","School", "Teacher", "Student", "Classroom", "Learning", "Reading", "Writing", "Arithmetic", "Science", "History",
-    "Geography", "Art", "Music", "Dance", "Movie", "Theater", "Song", "Dance", "Painting", "Sculpture",
-    "Photograph", "Camera", "Travel", "Adventure", "Explore", "Map", "Compass", "Backpack", "Passport", "Vacation",
-    "Holiday", "Beach", "Forest", "Camping", "Hiking", "Cooking", "Recipe", "Restaurant", "Food", "Drink","guitar", "piano", "violin", "trumpet", "flute", "drum", "accordion", "cello", "harp", "saxophone",
-    "planet", "galaxy", "universe", "nebula", "asteroid", "comet", "satellite", "spaceship", "astronaut", "cosmos",
-    "garden", "flower", "tree", "butterfly", "dragonfly", "sunflower", "rose", "tulip", "daisy", "daffodil",
-    "library", "bookstore", "classroom", "university", "student", "teacher", "education", "knowledge", "learning", "wisdom",
-    "history", "geography", "science", "chemistry", "biology", "physics", "mathematics", "language", "literature", "philosophy",
-    "rainbow", "cloud", "rain", "thunder", "lightning", "storm", "snow", "ice", "wind", "weather",
-    "mountain", "valley", "canyon", "plateau", "peak", "ridge", "cliff", "cave", "volcano", "earthquake",
-    "medicine", "doctor", "hospital", "nurse", "patient", "pharmacy", "vaccine", "health", "wellness", "fitness",
-    "diamond", "emerald", "sapphire", "ruby", "amethyst", "topaz", "opal", "quartz", "jade", "pearl",
-    "dragon", "unicorn", "phoenix", "mermaid", "wizard", "witch", "wizardry", "magic", "enchant", "spell",
-    "carousel", "ferriswheel", "rollercoaster", "cottoncandy", "popcorn", "festival", "fireworks", "parade", "balloon", "masquerade",
-    "School", "Teacher", "Student", "Classroom", "Learning", "Reading", "Writing", "Arithmetic", "Science", "History",
-    "Geography", "Art", "Music", "Dance", "Movie", "Theater", "Song", "Dance", "Painting", "Sculpture",
-    "Photograph", "Camera", "Travel", "Adventure", "Explore", "Map", "Compass", "Backpack", "Passport", "Vacation",
-    "Holiday", "Beach", "Forest", "Camping", "Hiking", "Cooking", "Recipe", "Restaurant", "Food", "Drink"
-  ];
+let arrList = //[
+//     "Apple", "Banana", "Orange", "Grape", "Strawberry", "Melon", "Kiwi", "Pineapple", "Blueberry", "Raspberry",
+//     "Cat", "Dog", "Elephant", "Lion", "Tiger", "Giraffe", "Zebra", "Monkey", "Kangaroo", "Penguin",
+//     "Computer", "Keyboard", "Mouse", "Monitor", "Laptop", "Tablet", "Smartphone", "Printer", "Router", "Server",
+//     "Mountain", "Ocean", "River", "Forest", "Desert", "Canyon", "Valley", "Island", "Lake", "Waterfall",
+//     "Sun", "Moon", "Star", "Planet", "Galaxy", "Universe", "Earth", "Mars", "Jupiter", "Saturn",
+//     "Chair", "Table", "Sofa", "Bed", "Lamp", "Clock", "Book", "Pen", "Pencil", "Paper","School", "Teacher", "Student", "Classroom", "Learning", "Reading", "Writing", "Arithmetic", "Science", "History",
+//     "Geography", "Art", "Music", "Dance", "Movie", "Theater", "Song", "Dance", "Painting", "Sculpture",
+//     "Photograph", "Camera", "Travel", "Adventure", "Explore", "Map", "Compass", "Backpack", "Passport", "Vacation",
+//     "Holiday", "Beach", "Forest", "Camping", "Hiking", "Cooking", "Recipe", "Restaurant", "Food", "Drink","guitar", "piano", "violin", "trumpet", "flute", "drum", "accordion", "cello", "harp", "saxophone",
+//     "planet", "galaxy", "universe", "nebula", "asteroid", "comet", "satellite", "spaceship", "astronaut", "cosmos",
+//     "garden", "flower", "tree", "butterfly", "dragonfly", "sunflower", "rose", "tulip", "daisy", "daffodil",
+//     "library", "bookstore", "classroom", "university", "student", "teacher", "education", "knowledge", "learning", "wisdom",
+//     "history", "geography", "science", "chemistry", "biology", "physics", "mathematics", "language", "literature", "philosophy",
+//     "rainbow", "cloud", "rain", "thunder", "lightning", "storm", "snow", "ice", "wind", "weather",
+//     "mountain", "valley", "canyon", "plateau", "peak", "ridge", "cliff", "cave", "volcano", "earthquake",
+//     "medicine", "doctor", "hospital", "nurse", "patient", "pharmacy", "vaccine", "health", "wellness", "fitness",
+//     "diamond", "emerald", "sapphire", "ruby", "amethyst", "topaz", "opal", "quartz", "jade", "pearl",
+//     "dragon", "unicorn", "phoenix", "mermaid", "wizard", "witch", "wizardry", "magic", "enchant", "spell",
+//     "carousel", "ferriswheel", "rollercoaster", "cottoncandy", "popcorn", "festival", "fireworks", "parade", "balloon", "masquerade",
+//     "School", "Teacher", "Student", "Classroom", "Learning", "Reading", "Writing", "Arithmetic", "Science", "History",
+//     "Geography", "Art", "Music", "Dance", "Movie", "Theater", "Song", "Dance", "Painting", "Sculpture",
+//     "Photograph", "Camera", "Travel", "Adventure", "Explore", "Map", "Compass", "Backpack", "Passport", "Vacation",
+//     "Holiday", "Beach", "Forest", "Camping", "Hiking", "Cooking", "Recipe", "Restaurant", "Food", "Drink"
+//   ]; 
+[
+  "Satisfaction","Opportunity","Imagination","Celebration","Information","Determined","Curiosity","Remarkable","Experience","Necessity","Friendship","Capability",
+"Resilience","Innovation","Adventure","Motivation","Generation","Creativity",
+"Transformation",
+"Consistent","Perspective","Happiness","Authenticity","Independence","Communication","Knowledgeable","Productive","Integrity","Comfortable","Spontaneous","Reflection","Consciousness","Opportunity","Encouragement","Exploration","Delicious","Satisfaction","Discipline","Inspiration","Motivation","Connection","Serendipity","Flexibility","Discipline","Perseverance","Stability","Confidence","Imagination","Friendship","Resilience","Authenticity","Capability","Transformation","Adventure","Happiness","Creativity","Innovation","Communication","Generation","Experience","Remarkable","Curiosity","Independence","Spontaneous","Productive","Knowledgeable","Consistent","Reflection","Comfortable","Integrity","Consciousness","Exploration","Delicious","Connection","Encouragement","Opportunity","Discipline","Satisfaction","Motivation","Inspiration","Exploration","Authenticity","Capability","Transformation","Adventure","Happiness","Creativity","Innovation","Communication","Generation","Experience","Remarkable","Curiosity","Independence","Spontaneous","Productive","Knowledgeable","Consistent","Reflection","Comfortable","Integrity","Consciousness","Exploration","Delicious","Connection","Encouragement","Opportunity","Discipline","Satisfaction","Motivation","Inspiration","Exploration","Authenticity","Capability","Transformation","Adventure","Happiness","Creativity","Innovation","Communication","Generation","Experience","Remarkable","Curiosity","Independence","Spontaneous","Productive","Knowledgeable","Consistent","Reflection","Comfortable","Integrity","Consciousness","Exploration","Delicious","Connection","Encouragement"
+];
 
 // Default score
 let score=1;
 
 //let arr=["one","two","three","four","helloworld"];
-let arr = [
+let arr = /*[
     "Apple", "Banana", "Orange", "Grape", "Strawberry", "Melon", "Kiwi", "Pineapple", "Blueberry", "Raspberry",
     "Cat", "Dog", "Elephant", "Lion", "Tiger", "Giraffe", "Zebra", "Monkey", "Kangaroo", "Penguin",
     "Computer", "Keyboard", "Mouse", "Monitor", "Laptop", "Tablet", "Smartphone", "Printer", "Router", "Server",
@@ -55,8 +61,12 @@ let arr = [
     "Geography", "Art", "Music", "Dance", "Movie", "Theater", "Song", "Dance", "Painting", "Sculpture",
     "Photograph", "Camera", "Travel", "Adventure", "Explore", "Map", "Compass", "Backpack", "Passport", "Vacation",
     "Holiday", "Beach", "Forest", "Camping", "Hiking", "Cooking", "Recipe", "Restaurant", "Food", "Drink"
-  ];
-
+  ];*/ [
+  "Satisfaction","Opportunity","Imagination","Celebration","Information","Determined","Curiosity","Remarkable","Experience","Necessity","Friendship","Capability",
+  "Resilience","Innovation","Adventure","Motivation","Generation","Creativity",
+  "Transformation",
+  "Consistent","Perspective","Happiness","Authenticity","Independence","Communication","Knowledgeable","Productive","Integrity","Comfortable","Spontaneous","Reflection","Consciousness","Opportunity","Encouragement","Exploration","Delicious","Satisfaction","Discipline","Inspiration","Motivation","Connection","Serendipity","Flexibility","Discipline","Perseverance","Stability","Confidence","Imagination","Friendship","Resilience","Authenticity","Capability","Transformation","Adventure","Happiness","Creativity","Innovation","Communication","Generation","Experience","Remarkable","Curiosity","Independence","Spontaneous","Productive","Knowledgeable","Consistent","Reflection","Comfortable","Integrity","Consciousness","Exploration","Delicious","Connection","Encouragement","Opportunity","Discipline","Satisfaction","Motivation","Inspiration","Exploration","Authenticity","Capability","Transformation","Adventure","Happiness","Creativity","Innovation","Communication","Generation","Experience","Remarkable","Curiosity","Independence","Spontaneous","Productive","Knowledgeable","Consistent","Reflection","Comfortable","Integrity","Consciousness","Exploration","Delicious","Connection","Encouragement","Opportunity","Discipline","Satisfaction","Motivation","Inspiration","Exploration","Authenticity","Capability","Transformation","Adventure","Happiness","Creativity","Innovation","Communication","Generation","Experience","Remarkable","Curiosity","Independence","Spontaneous","Productive","Knowledgeable","Consistent","Reflection","Comfortable","Integrity","Consciousness","Exploration","Delicious","Connection","Encouragement"
+  ]
 //let defArr=["one","two","three","four","helloworld"];
 
 // random number to be taken from the array
@@ -91,7 +101,7 @@ function newGame(){
     // remove the "name cannot be empty" if the user tried to start a game without entering his name
     document.querySelector(".par").style.display="none";
     //rebring the array
-    arr=[
+    arr=/*[
         "Apple", "Banana", "Orange", "Grape", "Strawberry", "Melon", "Kiwi", "Pineapple", "Blueberry", "Raspberry",
         "Cat", "Dog", "Elephant", "Lion", "Tiger", "Giraffe", "Zebra", "Monkey", "Kangaroo", "Penguin",
         "Computer", "Keyboard", "Mouse", "Monitor", "Laptop", "Tablet", "Smartphone", "Printer", "Router", "Server",
@@ -115,7 +125,12 @@ function newGame(){
         "Geography", "Art", "Music", "Dance", "Movie", "Theater", "Song", "Dance", "Painting", "Sculpture",
         "Photograph", "Camera", "Travel", "Adventure", "Explore", "Map", "Compass", "Backpack", "Passport", "Vacation",
         "Holiday", "Beach", "Forest", "Camping", "Hiking", "Cooking", "Recipe", "Restaurant", "Food", "Drink"
-      ];
+      ];*/ [
+  "Satisfaction","Opportunity","Imagination","Celebration","Information","Determined","Curiosity","Remarkable","Experience","Necessity","Friendship","Capability",
+  "Resilience","Innovation","Adventure","Motivation","Generation","Creativity",
+  "Transformation",
+  "Consistent","Perspective","Happiness","Authenticity","Independence","Communication","Knowledgeable","Productive","Integrity","Comfortable","Spontaneous","Reflection","Consciousness","Opportunity","Encouragement","Exploration","Delicious","Satisfaction","Discipline","Inspiration","Motivation","Connection","Serendipity","Flexibility","Discipline","Perseverance","Stability","Confidence","Imagination","Friendship","Resilience","Authenticity","Capability","Transformation","Adventure","Happiness","Creativity","Innovation","Communication","Generation","Experience","Remarkable","Curiosity","Independence","Spontaneous","Productive","Knowledgeable","Consistent","Reflection","Comfortable","Integrity","Consciousness","Exploration","Delicious","Connection","Encouragement","Opportunity","Discipline","Satisfaction","Motivation","Inspiration","Exploration","Authenticity","Capability","Transformation","Adventure","Happiness","Creativity","Innovation","Communication","Generation","Experience","Remarkable","Curiosity","Independence","Spontaneous","Productive","Knowledgeable","Consistent","Reflection","Comfortable","Integrity","Consciousness","Exploration","Delicious","Connection","Encouragement","Opportunity","Discipline","Satisfaction","Motivation","Inspiration","Exploration","Authenticity","Capability","Transformation","Adventure","Happiness","Creativity","Innovation","Communication","Generation","Experience","Remarkable","Curiosity","Independence","Spontaneous","Productive","Knowledgeable","Consistent","Reflection","Comfortable","Integrity","Consciousness","Exploration","Delicious","Connection","Encouragement"
+  ]
       //redfine variables
     randInt,selector;
     code=[];
@@ -129,7 +144,7 @@ function newGame(){
     //reset innerhtml
     document.querySelector(".lettersOfWord").innerHTML="";
     //select a word from array/dataset randomly
-    randInt = Math.floor(Math.random()*226)+1;
+    randInt = Math.floor(Math.random()*arr.length);
     selector=arr[randInt].toLowerCase();
     
     // put the number of letter as an empty place
@@ -169,7 +184,7 @@ function newGame(){
         document.querySelector(".modal1").style.display ="none";
         //clear the previous timer and adjust the timer based on diffiucility
         if(document.querySelector("#difficulity").value == "easy"){
-            seconds= 60;
+            seconds= 240;
             clearInterval(timegoing);
         }
         else if(document.querySelector("#difficulity").value == "medium"){
