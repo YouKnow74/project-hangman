@@ -1,7 +1,7 @@
 //setup global variables
 
 //global array
-let arr1List = //[
+let arrList = //[
 //     "Apple", "Banana", "Orange", "Grape", "Strawberry", "Melon", "Kiwi", "Pineapple", "Blueberry", "Raspberry",
 //     "Cat", "Dog", "Elephant", "Lion", "Tiger", "Giraffe", "Zebra", "Monkey", "Kangaroo", "Penguin",
 //     "Computer", "Keyboard", "Mouse", "Monitor", "Laptop", "Tablet", "Smartphone", "Printer", "Router", "Server",
